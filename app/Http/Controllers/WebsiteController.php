@@ -11,4 +11,10 @@ class WebsiteController extends Controller
     {
         return view('frontend.contact');
     }
+
+    // view project
+    public function viewProject()
+    {
+        return view('view_project');
+    }
 }
