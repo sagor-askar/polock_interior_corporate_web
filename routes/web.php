@@ -25,6 +25,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 // frontend routes
 Route::get('contact-us', [WebsiteController::class, 'contactUs'])->name('contact-us');
+Route::get('view-project', [WebsiteController::class, 'viewProject'])->name('viewProject');
 
 // backend routes
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
