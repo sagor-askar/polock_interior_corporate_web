@@ -55,12 +55,12 @@
             </a>
             <ul id="projects-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{ route('admin.milestones.index') }}">
+                    <a href="{{ route('admin.project-types.index') }}">
                         <i class="bi bi-circle"></i><span>Project Type</span>
                     </a>
                 </li>
                 <li>
-                    <a href="icons-remix.html">
+                    <a href="{{ route('admin.projects.index') }}">
                         <i class="bi bi-circle"></i><span>Projects</span>
                     </a>
                 </li>
