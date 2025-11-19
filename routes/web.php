@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\MilestoneController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\TeamMemberController;
+use App\Http\Controllers\Admin\ProjectTypeController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\WebsiteController;
 
 Route::get('/', function () {
@@ -31,4 +33,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::resource('clients', ClientController::class);
     Route::resource('testimonials', TestimonialController::class);
     Route::resource('team', TeamMemberController::class);
+    Route::resource('project-types', ProjectTypeController::class);
+    Route::resource('projects', ProjectController::class);
 });
