@@ -34,4 +34,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::resource('team', TeamMemberController::class);
     Route::resource('project-types', ProjectTypeController::class);
     Route::resource('projects', ProjectController::class);
+
+    Route::prefix('projects/{project}')->group(function () {
+        Route::get('image', [ProjectController::class, 'uploadImage'])->name('projects.image-upload');
+        Route::post('images', [ProjectController::class, 'uploadImageStore'])->name('projects.images.upload.store');
+        Route::delete('images/{image}', [ProjectController::class, 'projectImageDelete'])->name('projects.images.delete');
+    });
+
+
 });
