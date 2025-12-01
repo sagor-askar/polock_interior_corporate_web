@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('site_area')->nullable();
             $table->date('date_of_completion')->nullable();
-            $table->integer('stage')->default(0)->comment('0=>Ongoing, 0=>Completed');
+            $table->integer('stage')->default(0)->comment('0=>Ongoing, 1=>Completed');
             $table->longText('description')->nullable();
             $table->string('image_one')->nullable();
             $table->string('image_two')->nullable();
